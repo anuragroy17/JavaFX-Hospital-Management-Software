@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="815.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.anuragroy.controllers.DoctorLoginController">
+   <children>
+      <ImageView fitHeight="834.0" fitWidth="565.0" layoutX="-22.0" layoutY="-69.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../media/5.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="50.0" layoutY="68.0" opacity="0.78" prefHeight="698.0" prefWidth="456.0" style="-fx-background-color: #000000;">
+         <children>
+            <Label alignment="CENTER" layoutX="87.0" layoutY="52.0" prefHeight="79.0" prefWidth="283.0" style="-fx-border-color: #ffffff;" text="Welcome, Doctor!" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="58.0" layoutY="153.0" prefHeight="47.0" prefWidth="341.0" text="Sign-in to start your session." textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUsername" focusColor="#ffffff80" labelFloat="true" layoutX="87.0" layoutY="330.0" prefHeight="47.0" prefWidth="283.0" promptText="USERNAME" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px; -fx-text-fill: #fff; -fx-prompt-text-fill: #fff; -fx-font-size: 18px;" unFocusColor="#ffffff00">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" focusColor="#ffffff80" labelFloat="true" layoutX="87.0" layoutY="417.0" prefHeight="47.0" prefWidth="283.0" promptText="PASSWORD" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px; -fx-text-fill: #fff; -fx-prompt-text-fill: #fff; -fx-font-size: 18px;" unFocusColor="#ffffff00">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnSignin" layoutX="87.0" layoutY="512.0" onAction="#handleButtonClicks" prefHeight="47.0" prefWidth="283.0" style="-fx-background-color: #42b3f4; -fx-background-radius: 50px;" text="SIGN IN" textFill="WHITE" />
+            <JFXButton fx:id="btnMain" layoutX="163.0" layoutY="624.0" onAction="#handleButtonClicks" prefHeight="41.0" prefWidth="130.0" style="-fx-background-color: #ff3f3f; -fx-background-radius: 10;" text="GO BACK" textFill="WHITE" />
+            <Separator layoutX="58.0" layoutY="216.0" prefHeight="1.0" prefWidth="341.0" />
+            <Separator layoutX="58.0" layoutY="589.0" prefHeight="1.0" prefWidth="341.0" />
+            <JFXComboBox id="combo-box" fx:id="dropDept" focusColor="#ffffff80" labelFloat="true" layoutX="87.0" layoutY="237.0" pickOnBounds="false" prefHeight="47.0" prefWidth="283.0" promptText="Select Department" stylesheets="@../style/style.css" unFocusColor="#ffffff80" visibleRowCount="12" />
+            <Label fx:id="lblErrors" alignment="CENTER" layoutX="58.0" layoutY="464.0" prefHeight="47.0" prefWidth="341.0" text="Errors" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <MaterialDesignIconView id="close" fx:id="btnClose" glyphName="WINDOW_CLOSE" layoutX="522.0" layoutY="32.0" onMouseClicked="#closeApp" size="20" stroke="BLACK" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

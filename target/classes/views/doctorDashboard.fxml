@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="905.0" prefWidth="1440.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.anuragroy.controllers.DoctorDashboard">
+   <children>
+      <ImageView fitHeight="201.0" fitWidth="1442.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../media/9.jpg" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="195.0" prefWidth="542.0">
+         <children>
+            <Label fx:id="lblName" layoutX="110.0" layoutY="88.0" prefHeight="73.0" prefWidth="432.0" text="Name" textFill="#4292cf">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="25.0" prefHeight="73.0" prefWidth="143.0" text="Hello," textFill="#ff7373">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="88.0" prefHeight="73.0" prefWidth="76.0" text="Dr." textFill="#4292cf">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErrors" layoutX="33.0" layoutY="146.0" prefHeight="53.0" prefWidth="411.0" style="-fx-background-radius: 10;" text="Database Errors" />
+         </children>
+      </Pane>
+      <TreeTableView fx:id="treeTableView" layoutX="6.0" layoutY="195.0" prefHeight="742.0" prefWidth="993.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="0.0">
+        <columns>
+          <TreeTableColumn fx:id="nameCol" prefWidth="205.0" text="NAME" />
+          <TreeTableColumn fx:id="reportCol" minWidth="0.0" prefWidth="244.0" text="REPORT" />
+            <TreeTableColumn fx:id="disCol" prefWidth="170.0" text="DISEASE" />
+            <TreeTableColumn fx:id="medCol" prefWidth="243.0" text="MEDICINE" />
+            <TreeTableColumn fx:id="cureCol" prefWidth="130.0" text="CURED?" />
+        </columns>
+      </TreeTableView>
+      <Pane layoutX="994.0" layoutY="195.0" prefHeight="742.0" prefWidth="448.0" style="-fx-background-color: #ddfff9;">
+         <children>
+            <Pane layoutX="6.0" layoutY="9.0" prefHeight="558.0" prefWidth="438.0" style="-fx-border-color: #8e8e8e; -fx-border-radius: 10px;">
+               <children>
+                  <Label layoutX="9.0" layoutY="7.0" prefHeight="26.0" prefWidth="69.0" text="Name : - ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPname" disable="true" layoutX="80.0" layoutY="7.0" prefHeight="26.0" prefWidth="343.0" text="Name of Patient">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="44.0" prefHeight="26.0" prefWidth="76.0" text="Report: -">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="283.0" prefHeight="26.0" prefWidth="76.0" text="Disease: -">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="327.0" prefHeight="26.0" prefWidth="90.0" text="Medicine: -">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtDisease" layoutX="85.0" layoutY="276.0" prefHeight="41.0" prefWidth="343.0" text="Disease Name" unFocusColor="#4d4d4d00">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextArea fx:id="txtReport" layoutX="9.0" layoutY="80.0" prefHeight="187.0" prefWidth="421.0" style="-fx-border-color: #000;" text="fsjlh;alhfgl;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></JFXTextArea>
+                  <JFXTextArea fx:id="txtMed" layoutX="9.0" layoutY="359.0" prefHeight="187.0" prefWidth="421.0" style="-fx-border-color: #000;" text="fsjlh;alhfgl;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font></JFXTextArea>
+                  <Label fx:id="lblEdit" alignment="CENTER" layoutX="56.0" layoutY="607.0" prefHeight="41.0" prefWidth="327.0" style="-fx-background-radius: 10;" text="Edit Errors" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXButton fx:id="btnEdit" layoutX="41.0" layoutY="661.0" onAction="#handleButtonClicks" prefHeight="59.0" prefWidth="200.0" style="-fx-background-color: #4292cf; -fx-background-radius: 10;" text="CREATE/EDIT" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDel" layoutX="285.0" layoutY="661.0" onAction="#handleButtonClicks" prefHeight="59.0" prefWidth="130.0" style="-fx-background-color: #ff7373; -fx-background-radius: 10;" text="DEL" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDone" layoutX="88.0" layoutY="577.0" onAction="#handleButtonClicks" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #4292cf; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCancel" layoutX="257.0" layoutY="577.0" onAction="#handleButtonClicks" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #ff7373; -fx-background-radius: 10;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnMain" layoutX="1298.0" layoutY="77.0" onAction="#handleButtonClicks" prefHeight="41.0" prefWidth="130.0" style="-fx-background-color: #ff7373; -fx-background-radius: 10;" text="SIGN OUT" textFill="WHITE" />
+      <MaterialDesignIconView id="close" fx:id="btnClose" glyphName="WINDOW_CLOSE" layoutX="1411.0" layoutY="29.0" onMouseClicked="#closeApp" size="20" stroke="BLACK" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
