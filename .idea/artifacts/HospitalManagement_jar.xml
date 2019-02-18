@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HospitalManagement:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HospitalManagement_jar</output-path>
+    <root id="archive" name="HospitalManagement.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="HospitalManagement" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lib/FontAwesome/fontawesomefx-8.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/json/json/20160810/json-20160810.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/de/jensd/fontawesomefx/8.6/fontawesomefx-8.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jfoenix/jfoenix/8.0.8/jfoenix-8.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/lib/mysql/mysql-connector-java-8.0.15.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
